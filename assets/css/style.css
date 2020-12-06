@@ -1,0 +1,348 @@
+::-webkit-scrollbar-track {
+    background-color: var(--white);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+/*fim Scroll*/
+:root{
+    --white: #fff;
+    --black: #000;
+    --tblack: rgba(34, 34, 34, 0.733);
+    --primary: rgb(167, 0, 0);
+    --tprimary: rgba(167, 0, 0, 0.432);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html{
+    width: 100%;
+    height: 5000px;
+    background: #333;
+}
+a{
+    text-decoration: none;
+    color: var(--white) !important;
+}
+a:hover{
+    text-decoration: none;
+}
+.infossup{
+    color: var(--black);
+    padding: 0 0 0 2%;
+    position: relative;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    line-height: 25pt;
+}
+.menusup{
+    width: 100%;
+    background: var(--tblack);
+    height: 10vh;
+    position: relative;
+    z-index: 99;
+}
+.menufixed{
+    position: fixed;
+    top: 0;
+    transition: 5s ease-in-out;
+}
+.clear{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+nav.menusup h1{
+    float: left;
+    line-height: 10vh;
+    margin-left: 2%;
+    font-size: 30pt;
+    color: var(--white);
+}
+nav.menusup li, div.div_banner li{
+    display: inline-block;
+    line-height: 10vh;
+    margin: 0 4% 0 4%;
+}
+nav.menusup ul{
+    float: right;
+    margin-right: 2%;
+    font-size: 15pt;
+    width: 40%;
+}
+nav.menusup li:hover{
+    text-decoration: underline;
+}
+div.div_banner{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    background-image: url(../images/comida_fundo.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+div.div_banner h2{
+    font-size: 40pt;
+    color: var(--white);
+    text-transform: uppercase;
+}
+div.div_banner p{
+    line-height: 25pt;
+    color: var(--white);
+    font-size: 15pt;
+    text-indent: 50pt;
+    text-align: justify;
+}
+div.div_banner ul{
+    margin-top: 5%;
+    font-size: 17pt;
+    width: 100%;
+    text-align: center;
+}
+div.div_banner li{
+    margin: 2%;
+    height: 5vh;
+    line-height: 5vh;
+    background: var(--tblack);
+    width: 10%;
+    border: 1px solid var(--primary);
+    border-radius: 2px;
+    transition: .4s linear;
+    text-transform: uppercase;
+}
+.div_banner li:hover{
+    background: var(--primary);
+}
+div.texto_banner{
+    background-image: linear-gradient(to right, var(--tblack) 30%, rgba(34, 34, 34, 0.089), transparent);
+    margin: 13% 40% 0 0%;
+    padding: 2%;
+}
+nav.menusup .open-mob{
+    display: none;
+}
+.display-block{
+    display: block !important;
+    background-color: rgba(0, 0, 0, 0.829);
+}
+/*=====================================================fim de banner e menu=================================================*/
+.topicos{
+    width: 70%;
+    display: inline-block;
+    background-color: rgba(58, 58, 58, 0.514);
+    margin: 0 10% 5% 10%;
+    padding: 4% 5% 5% 5%;
+}
+h3{
+    font-size: 20pt;
+    color: var(--white);
+    margin: 0 0 1% 0;
+    text-transform: uppercase;
+}
+h3::before{
+    content: "•";
+}
+.topicos ul{
+    width: 100%;
+    float: left;
+    list-style: none;
+    color: var(--white);
+}
+.topicos li{
+    height: 10vh;
+    width: 45%;
+    float: left;
+    margin: 2%;
+}
+.topicos div.prod-valor{
+    float: right;
+    font-size: 16pt;
+}
+.topicos div.prod-ingre{
+    float: left;
+    color: #bbb;
+    font-family: 'Times New Roman';
+}
+.topicos img{
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+}
+.topicos div.img, .prod{
+    float: left;
+    font-size: 16pt;
+}
+.topicos div.img{
+    margin: 0 4% 0 0;
+}
+.btns-cardapio li{
+    background-color: var(--tblack);
+    line-height: 5vh;
+    height: 5vh;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: -5%;
+    border: 1px solid var(--primary);
+    transition: .4s linear;
+    text-transform: uppercase;
+}
+.btns-cardapio li:hover{
+    background-color: var(--tprimary);
+}
+
+/*======================================================Fim cardapio=====================================================*/
+input, textarea{
+    color: var(--white);
+    background-color: var(--tblack);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    width: 100%;
+    line-height: 25pt;
+    font-size: 13pt;
+    outline: none;
+}
+label{
+    color: var(--white);
+    font-size: 15pt;
+    padding: 10vh 0 10vh 0;
+    line-height: 40pt;
+}
+.quantpessoas, .diahr, .reservanome, .reservapref{
+    background: rgba(0, 0, 0, 0.100);
+    margin: 1% 0 0 0;
+    padding: 2%;
+}
+.quantpessoas div label, .diahr div label, .reservanome div label, .reservapref div label{
+    line-height: 20pt;
+}
+.btn-reserva{
+    margin-left: 30%;
+}
+
+
+
+/*Media Queries*/
+/*Menu*/
+@media only screen and (max-width: 1376px) {
+    .mob{
+        display: none;
+    }
+    nav.menusup ul{
+        width: 15%;
+        text-align: center;
+    }
+    nav.menusup .open-mob{
+        display: block;
+    }
+}
+/*tablets*/
+@media only screen and (max-width: 1200px) {
+    nav.menusup h1{
+        width: 76%;
+        text-align: center;
+    }
+    div.texto_banner{
+        margin: 13% auto;
+        width: 80%;
+    }
+    div.div_banner h2{
+        font-size: 30pt;
+        text-align: center;
+    }
+    div.div_banner p{
+        font-size: 18pt;
+    }
+    nav.menusup ul{
+        width: 20%;
+    }
+    div.div_banner li{
+        margin: -20% 2% 2% 2%;
+        width: 15%;
+    }
+    
+    .topicos li{
+        margin-bottom: 10%;
+    }
+    .topicos{
+        padding: 2% 3% 3% 3%;
+    }
+    h3{
+        text-align: center;
+    }
+    h3::before{
+        content: "";
+    }
+}
+/*celular*/
+@media only screen and (max-width: 860px) {
+    nav.menusup h1{
+        width: 76%;
+        text-align: center;
+        font-size: 25pt;
+    }
+    .texto_banner{
+        display: none;
+    }
+    .div_banner ul{
+        margin-top: 80vh !important;
+        width: 100% !important;
+    }
+    .div_banner li{
+        width: 40% !important;
+        height: 7vh !important;
+        line-height: 7vh !important;
+    }
+    nav.menusup ul{
+        width: 20%;
+    }
+    .mob li{
+        width: 100%;
+    }
+    .menumob{
+        width: 100% !important;
+        position: absolute;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.900);
+    }
+    .display-block{
+        background-color: transparent;
+    }
+    .text-right{
+        text-align: right;
+    }
+    .invi{
+        display: none;
+    }
+    .topicos li{
+        width: 100%;
+        margin-bottom: 15%;
+    }
+    h3{
+        margin-bottom: 10%;
+        text-align: center;
+    }
+    h3::before{
+        content: "";
+    }
+    .btns-cardapio li{
+        margin-bottom: 1%;
+        height: 8vh;
+        line-height: 8vh;
+    }
+    .btn-reserva{
+        margin-left: -2%;
+        margin-right: 2.3%;
+    }
+}

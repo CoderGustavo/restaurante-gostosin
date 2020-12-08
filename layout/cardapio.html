@@ -3,57 +3,61 @@
     <div class="topicos">
         <h3> Cardapio</h3>
         <div class="filtro-categorias">
-            <input type="radio" name="cat" id="cat_basico">
-            <input type="radio" name="cat" id="cat_mistura">
-            <input type="radio" name="cat" id="cat_salada">
-            <input type="radio" name="cat" id="cat_sobremesa">
+            <ul>
+                <li class="filtro active" data-filter="todos">Todos</li>
+                <li class="filtro" data-filter="basico">Basico</li>
+                <li class="filtro" data-filter="mistura">Mistura</li>
+                <li class="filtro" data-filter="sobremesa">sobremesa</li>
+                <li class="filtro" data-filter="lanches">Lanches</li>
+            </ul>     
         </div>
-        <ul>
-            <li>
+        <ul class="prods">
+            <li class="list-card basico">
                 <div class="img">
-                    <img src="assets/images/cardapio/prod1.png" alt="X-Burguer">
+                    <img src="assets/images/cardapio/prod1.png" alt="arroz">
                 </div>
                 <div class="prod">
-                    <p>X-Burguer</p>
+                    <p>Arroz</p>
                 </div>
                 <div class="prod-valor">
                     <p>R$10,00</p>
                 </div>
                 <div class="prod-ingre">
-                    <p>pao de hamburguer, hamburguer, queijo, ketchup e maionese</p>
+                </br>
+                    <p>arroz</p>
                 </div>
             </li>
-            <li>
+            <li class="list-card mistura">
                 <div class="img">
-                    <img src="assets/images/cardapio/prod1.png" alt="X-Burguer">
+                    <img src="assets/images/cardapio/prod1.png" alt="bife de lombo">
                 </div>
                 <div class="prod">
-                    <p>X-Burguer</p>
+                    <p>Bife de Lombo</p>
                 </div>
                 <div class="prod-valor">
                     <p>R$10,00</p>
                 </div>
                 <div class="prod-ingre">
-                    <p>pao de hamburguer, hamburguer, queijo, ketchup e maionese</p>
+                    <p></p>
                 </div>
             </li>
-            <li>
+            <li class="list-card sobremesa">
                 <div class="img">
-                    <img src="assets/images/cardapio/prod1.png" alt="X-Burguer">
+                    <img src="assets/images/cardapio/prod1.png" alt="gelatina">
                 </div>
                 <div class="prod">
-                    <p>X-Burguer</p>
+                    <p>Gelatina</p>
                 </div>
                 <div class="prod-valor">
-                    <p>R$10,00</p>
+                    <p>R$3,00</p>
                 </div>
                 <div class="prod-ingre">
-                    <p>pao de hamburguer, hamburguer, queijo, ketchup e maionese</p>
+                    <p></p>
                 </div>
             </li>
-            <li>
+            <li class="list-card lanches">
                 <div class="img">
-                    <img src="assets/images/cardapio/prod1.png" alt="X-Burguer">
+                    <img src="assets/images/cardapio/prod1.png" alt="xBurguer">
                 </div>
                 <div class="prod">
                     <p>X-Burguer</p>
@@ -62,17 +66,20 @@
                     <p>R$10,00</p>
                 </div>
                 <div class="prod-ingre">
-                    <p>pao de hamburguer, hamburguer, queijo, ketchup e maionese</p>
+                    <p></p>
                 </div>
             </li>
         </ul>
-        <ul class="btns-cardapio">
-            <a href="#">    
-                <li>Pedir Delivery</li>
-            </a>
-            <a href="#reserva">    
-                <li>Reservar uma Mesa</li>
-            </a>
-        </ul>
+        <div class="btns-cardapio">
+            <ul>
+                <a href="#">    
+                    <li>Pedir Delivery</li>
+                </a>
+                <a href="#reserva">    
+                    <li>Reservar uma Mesa</li>
+                </a>
+            </ul>
+        </div>
+        
     </div>
 </div>

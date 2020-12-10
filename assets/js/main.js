@@ -1,8 +1,12 @@
+// animação de scroll na navegação
+
 function goTo(element, speed){
   var href = element.attr('href');
   var top = $(href).offset().top;
   $("html,body").animate({scrollTop : top}, speed);
 }
+
+// usando a animação para fazer o scroll na one page
 
 $(function(){
   $("#top a").click(function(e){
@@ -23,6 +27,8 @@ $(function(){
   });
 });
 
+// menu fixado ao scrollar
+
 $(document).ready(function() {
 	$(document).scroll(function() {
   	if($(document).scrollTop() > 150) {
@@ -34,6 +40,7 @@ $(document).ready(function() {
   });
 });
 
+//menu filtro no cardapio
 
 $(document).ready(function(){
   $(".filtro").click(function(){
@@ -49,5 +56,23 @@ $(document).ready(function(){
 
 $('.filtro').click(function(){
   $(this).addClass("active").siblings().removeClass('active');
-
 });
+
+// menu de pedidos delivery
+
+$('.list-pedido').click(function(){
+  $(this).toggleClass("active");
+});
+
+// menu metodo de pagamento
+
+$('.list-metodo1').click(function(){
+  $(this).addClass("active");
+  $(".list-metodo2").removeClass("active")
+});
+
+$('.list-metodo2').click(function(){
+  $(this).addClass("active");
+  $(".list-metodo1").removeClass("active")
+});
+

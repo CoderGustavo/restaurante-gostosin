@@ -20,10 +20,20 @@
         <section id="reserva">
             <?php include_once("layout/reserva.html")?>
         </section>
+        <section id="feedback">
+            <?php include_once("layout/feedback.html")?>
+        </section>
+        <section id="delivery">
+            <?php include_once("layout/delivery.html")?>
+        </section>
+        <section id="footer">
+            <?php include_once("layout/footer.html")?>
+        </section>
     </section>
     
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="assets/js/open-mob.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/avaliacao.js"></script>
 </body>
 </html>

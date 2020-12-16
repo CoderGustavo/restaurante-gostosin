@@ -35,5 +35,6 @@
     <script src="assets/js/open-mob.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/avaliacao.js"></script>
+    <script type="text/javascript"src="assets/js/animations.js"></script>
 </body>
 </html>

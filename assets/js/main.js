@@ -59,11 +59,9 @@ $('.filtro').click(function(){
 });
 
 // menu de pedidos delivery
-
-$('.list-pedido').click(function(){
+$('.itempedido li').click(function(){
   $(this).toggleClass("active");
 });
-
 // menu metodo de pagamento
 
 $('.list-metodo1').click(function(){

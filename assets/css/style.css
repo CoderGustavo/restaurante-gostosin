@@ -12,6 +12,11 @@
 :root{
     --white: #fff;
     --black: #000;
+    --ava5: #27ae60;
+    --ava4: #f1c40f;
+    --ava3: #e67e22;
+    --ava2: #d35400;
+    --ava1: #c0392b;
     --tblack: rgba(34, 34, 34, 0.733);
     --primary: #a70000;
     --tprimary: rgba(167, 0, 0, 0.432);
@@ -21,9 +26,8 @@
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-html{
+html, body{
     width: 100%;
-    height: 5000px;
     background: #333;
 }
 a{
@@ -47,6 +51,7 @@ a:hover{
     background: var(--tblack);
     height: 10vh;
     position: relative;
+    top: -100%;
     z-index: 99;
 }
 .menufixed{
@@ -57,6 +62,7 @@ a:hover{
 .clear{
     width: 100%;
     height: 100vh;
+    min-height: 700px;
     position: relative;
     z-index: -1;
 }
@@ -84,6 +90,7 @@ nav.menusup li:hover{
 div.div_banner{
     width: 100%;
     height: 100vh;
+    min-height: 700px;
     position: absolute;
     top: 0;
     z-index: 0;
@@ -130,6 +137,8 @@ div.texto_banner{
     background-image: linear-gradient(to right, var(--tblack) 30%, rgba(34, 34, 34, 0.089), transparent);
     margin: 13% 40% 0 0;
     padding: 2%;
+    position: relative;
+    left: -100%;
 }
 nav.menusup .open-mob{
     display: none;
@@ -155,36 +164,41 @@ h3{
 h3::before{
     content: "•";
 }
-.filtro-categorias,.pedido,.metodopagamento{
+.filtro-categorias,.metodopagamento{
     display: inline-block;
     width: 100%;
 }
-.pedido input,.metodopagamento input{
+.metodopagamento input{
     display: none;
 }
-.filtro-categorias input:checked + label,.pedido input:checked + label,.metodopagamento input:checked + label{
+.filtro-categorias input:checked + label,.metodopagamento input:checked + label{
     text-decoration: underline;
 }
-.filtro-categorias ul,.pedido ul,.metodopagamento ul{
+.filtro-categorias ul,.metodopagamento ul{
     width: 100% !important;
     height: 5vh;
     margin: 0 auto;
     margin-bottom: 3%;
 }
-.filtro-categorias li,.pedido li,.metodopagamento li{
+.filtro-categorias li,.metodopagamento li{
+    height: 5vh !important;
+    text-align: center;
+}
+
+.filtro-categorias li,.metodopagamento li{
     width: 20% !important;
     font-size: 15pt;
-    text-align: center;
-    margin: 0 auto!important;
+    margin: 0 auto !important;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.096);
-    height: 5vh !important;
     line-height: 5vh;
 }
-.filtro-categorias .active,.pedido .active,.metodopagamento .active{
+.filtro-categorias .active,.metodopagamento .active{
+    height: 5vh;
+}
+.filtro-categorias .active,.metodopagamento .active{
     background-color: var(--primary);
     line-height: 5vh;
-    height: 5vh;
 }
 
 
@@ -251,7 +265,7 @@ input[type="text"],input[type="number"], textarea{
 .topicos label{
     color: var(--white);
     font-size: 15pt;
-    padding: 10vh 0 10vh 0;
+    margin: 10vh 0 10vh 0;
     line-height: 40pt;
 }
 .quantpessoas, .diahr, .reservanome, .reservapref{
@@ -266,47 +280,149 @@ input[type="text"],input[type="number"], textarea{
     margin-left: 33.3%;
 }
 /*====================================Fim reserva=====================================*/
+
+#ava5{
+    box-shadow: 0 0 7px var(--ava5);
+}
+#ava5 .ava{
+    color: var(--ava5);
+}
+#ava4{
+    box-shadow: 0 0 7px var(--ava4);
+}
+#ava4 .ava{
+    color: var(--ava4);
+}
+#ava3{
+    box-shadow: 0 0 7px var(--ava3);
+}
+#ava3 .ava{
+    color: var(--ava3);
+}
+#ava2{
+    box-shadow: 0 0 7px var(--ava2);
+}
+#ava2 .ava{
+    color: var(--ava2);
+}
+#ava1{
+    box-shadow: 0 0 7px var(--ava1);
+}
+#ava1 .ava{
+    color: var(--ava1);
+}
+
 .feedbacks{
+    position: relative;
+    background: var(--tblack);
+    width: 31%;
+    height: 500px;
+    margin-bottom: 2%;
     display: inline-block;
-    background: #333;
-    width: 29%;
-    height: 50vh;
-    padding: 2%;
+    border-radius: 5px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
     color: var(--white);
-    border-radius: 15px;
+    margin: 1%;
 }
-.feedbacks h2{
-    font-size: 20pt;
+.feedbacks .foto-feedbacks{
+    position: absolute;
+    top: 0;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.foto-feedbacks .img{
+    margin: 0 auto;
+    height: 125px;
+    width: 125px;
+    border-radius: 75px;  
+    background: url(../images/feedback/perfilp.png) no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.feedbacks .title-feedbacks{
+    width: 100%;
+    font-size: 35px;
     text-align: center;
-    margin-bottom: 20%;
+    position: absolute;
+    top: 150px;
+    z-index: 2;
 }
-.feedbacks p{
-    font-size: 13pt;
+.feedbacks .text-feedbacks{
+    width: 100%;
     text-align: justify;
+    position: absolute;
+    top: 185px;
+}
+.text-feedbacks p{
+    margin: 10%;
     line-height: 20pt;
-    margin-bottom: 50%;
 }
-.feedbacks input{
-    display: none;
-}
-.estrelas{
-    width: 16.6% !important;
-    height: 5vh !important;
-    line-height: 5vh;
-    margin: 0 !important;
-    text-align: center;
-    background: red;
-}
-.avaliacao img{
-    width: 45%;
-    border-radius: 0;
-    height: 3vh;
-    margin: 0 auto !important;
-}
-.avaliacao p{
+.feedbacks .ava{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    font-size: 50px;
     text-align: center;
 }
 /*====================================Fim feedback=====================================*/
+.itempedido{
+    position: relative;
+    width: 49.7%;
+    height: 10vh;
+    display: inline-block;
+}
+.itempedido input[type='checkbox']{
+    display: none;
+}
+.pedidoselect li.active{
+    background-color: var(--primary);
+}
+.pedidoselect{
+    position: relative;
+    box-shadow: 0 5px 5px var(--tblack);
+    width: 100%;
+    height: 100%;
+}
+.pedidoselect li{
+    margin: 0;
+    width: 100%;
+    cursor: pointer;
+}
+.pedidoselect li p{
+    position: absolute;
+    left: 0;
+    line-height: 10vh;
+    margin-left: 5%;
+}
+.qtds{
+    position: absolute;
+    right: 0;
+    width: 30%;
+    line-height: 10vh;
+    top: 0vh;
+}
+.qtds span{
+    font-size: 15pt;
+    line-height: 5vh;
+}
+#qtds{
+    line-height: 5vh;
+    margin-bottom: 2.5vh;
+}
+.itempedido input[type='number']{
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+}
+
 
 /*====================================Fim delivery=====================================*/
 footer{
@@ -416,6 +532,12 @@ footer .copyright{
     h3::before{
         content: "";
     }
+    .feedbacks{
+        width: 47%;
+    }
+    .itempedido{
+        width: 49%;
+    }
 }
 /*celular*/
 @media only screen and (max-width: 860px) {
@@ -479,15 +601,25 @@ footer .copyright{
     h3::before{
         content: "";
     }
-    .btns-cardapio li{
-        margin-left: 0%;
-        margin-right: 1%;
+    .btns-cardapio{
+        margin: 0;
+    }
+    .btns-cardapio li,.btn-feedback li,.btn-reserva li,.btn-delivery li{
+        margin-left: -1%;
+        margin-right: 3%;
         height: 8vh;
         line-height: 8vh;
         margin-bottom: 0;
     }
-    .btn-reserva{
-        margin-left: 0%;
-        margin-right: 1%;
+    .btns-cardapio,.btn-feedback,.btn-reserva,.btn-delivery{
+        margin-left: 1%;
+        margin-right: -1%;
+    }
+    .feedbacks{
+        width: 98%;
+        height: 400px;
+    }
+    .itempedido{
+        width: 100%;
     }
 }

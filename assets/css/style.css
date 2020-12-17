@@ -57,7 +57,6 @@ a:hover{
 .menufixed{
     position: fixed;
     top: 0;
-    transition: 5s ease-in-out;
 }
 .clear{
     width: 100%;
@@ -179,6 +178,7 @@ h3::before{
     height: 5vh;
     margin: 0 auto;
     margin-bottom: 3%;
+    box-shadow: 0 5px 5px var(--tblack);
 }
 .filtro-categorias li,.metodopagamento li{
     height: 5vh !important;
@@ -194,11 +194,9 @@ h3::before{
     line-height: 5vh;
 }
 .filtro-categorias .active,.metodopagamento .active{
-    height: 5vh;
-}
-.filtro-categorias .active,.metodopagamento .active{
     background-color: var(--primary);
     line-height: 5vh;
+    height: 5vh;
 }
 
 
@@ -246,6 +244,9 @@ h3::before{
     border: 1px solid var(--primary);
     transition: .4s linear;
     text-transform: uppercase;
+}
+.btns-cardapio{
+    margin-top: 0%;
 }
 .btns li:hover{
     background-color: var(--tprimary);
@@ -316,7 +317,7 @@ input[type="text"],input[type="number"], textarea{
     position: relative;
     background: var(--tblack);
     width: 31%;
-    height: 500px;
+    min-height: 500px;
     margin-bottom: 2%;
     display: inline-block;
     border-radius: 5px;
@@ -382,7 +383,7 @@ input[type="text"],input[type="number"], textarea{
 .itempedido input[type='checkbox']{
     display: none;
 }
-.pedidoselect li.active{
+.itempedido .active{
     background-color: var(--primary);
 }
 .pedidoselect{
@@ -413,7 +414,7 @@ input[type="text"],input[type="number"], textarea{
     font-size: 15pt;
     line-height: 5vh;
 }
-#qtds{
+.inqtds{
     line-height: 5vh;
     margin-bottom: 2.5vh;
 }
@@ -421,6 +422,16 @@ input[type="text"],input[type="number"], textarea{
     position: absolute;
     bottom: 0;
     width: 50%;
+}
+.metodopagamento ul{
+    box-shadow: 0 5px 5px var(--tblack);
+}
+.metodopagamento li{
+    width: 50% !important;
+}
+.metodopagamento li.active{
+    background: var(--tblack);
+    box-shadow: 0 5px 5px var(--primary);
 }
 
 

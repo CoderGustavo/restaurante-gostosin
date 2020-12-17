@@ -29,15 +29,13 @@ $(function(){
 
 // menu fixado ao scrollar
 
-$(document).ready(function() {
-	$(document).scroll(function() {
-  	if($(document).scrollTop() > 150) {
-    	$('.menusup').addClass('menufixed');
-    }
-    else {
+$(document).scroll(function() {
+  if($(document).scrollTop() > 150) {
+    $('.menusup').addClass('menufixed');
+  }
+  else {
     $('.menusup').removeClass('menufixed');
-    }
-  });
+  }
 });
 
 //menu filtro no cardapio
@@ -59,8 +57,19 @@ $('.filtro').click(function(){
 });
 
 // menu de pedidos delivery
+$('.itempedido .qtds').hide();
+
 $('.itempedido li').click(function(){
-  $(this).toggleClass("active");
+  
+  if($(this).hasClass("active")){
+    $(this).removeClass("active");
+    $(this).parent('label').children('.qtds').hide(200);
+  }else{
+    $(this).addClass("active");
+    $(this).children('.qtds').show(200);
+    $(this).parent('label').children('.qtds').show(200);
+  }
+  
 });
 // menu metodo de pagamento
 
